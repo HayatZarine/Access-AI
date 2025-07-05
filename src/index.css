@@ -125,3 +125,28 @@ All colors MUST be HSL with high contrast ratios for WCAG AAA compliance.
     @apply bg-background text-foreground;
   }
 }
+
+/* Simplified UI Mode for Cognitive Accessibility */
+.simplified-ui {
+  font-size: 1.2em;
+}
+
+.simplified-ui * {
+  animation: none !important;
+  transition: none !important;
+}
+
+.simplified-ui .bg-gradient-hero,
+.simplified-ui .bg-gradient-card,
+.simplified-ui .bg-gradient-primary {
+  background: hsl(var(--background)) !important;
+}
+
+.simplified-ui .shadow-glow,
+.simplified-ui .shadow-elegant {
+  box-shadow: none !important;
+}
+
+.simplified-ui .border-border {
+  border: 2px solid hsl(var(--primary)) !important;
+}

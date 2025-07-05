@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { FeatureCard } from "@/components/FeatureCard";
 import { AccessibilityProfile } from "@/components/AccessibilityProfile";
+import { AccessibilityTestPanel } from "@/components/AccessibilityTestPanel";
 import { useToast } from "@/hooks/use-toast";
 import { 
   Headphones, 
@@ -198,14 +199,18 @@ const Index = () => {
             {features.map((feature) => (
               <FeatureCard
                 key={feature.id}
+                id={feature.id}
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}
                 features={feature.features}
-                onActivate={() => toggleFeature(feature.id)}
-                isActive={activeFeatures.has(feature.id)}
               />
             ))}
+          </div>
+          
+          {/* Testing Panel */}
+          <div className="mt-12">
+            <AccessibilityTestPanel />
           </div>
         </div>
       </section>
