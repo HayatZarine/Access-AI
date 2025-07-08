@@ -1,9 +1,14 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { AuthGuard } from "@/components/AuthGuard";
+import { UserMenu } from "@/components/UserMenu";
 import { FeatureCard } from "@/components/FeatureCard";
 import { AccessibilityProfile } from "@/components/AccessibilityProfile";
 import { AccessibilityTestPanel } from "@/components/AccessibilityTestPanel";
+import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
 import { 
   Headphones, 
@@ -13,11 +18,15 @@ import {
   Mic, 
   Volume, 
   Camera,
-  Search
+  Search,
+  Shield,
+  ChevronRight,
+  LogIn
 } from "lucide-react";
 import heroImage from "@/assets/hero-accessibility.jpg";
 
 const Index = () => {
+  const { user } = useAuth();
   const { toast } = useToast();
   const [activeFeatures, setActiveFeatures] = useState<Set<string>>(new Set());
   const [activeProfile, setActiveProfile] = useState<string>("");
@@ -126,18 +135,91 @@ const Index = () => {
     }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-hero">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img 
-            src={heroImage} 
-            alt="Accessibility technology illustration" 
-            className="w-full h-full object-cover opacity-20"
-          />
-          <div className="absolute inset-0 bg-gradient-hero/80"></div>
+  if (!user) {
+    return (
+      <div className="min-h-screen bg-gradient-hero text-foreground">
+        {/* Navigation */}
+        <nav className="bg-background/80 backdrop-blur-sm border-b border-border sticky top-0 z-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center h-16">
+              <div className="flex items-center gap-2">
+                <Shield className="h-8 w-8 text-primary" />
+                <span className="text-2xl font-bold text-foreground">Access+</span>
+              </div>
+              <div className="flex items-center gap-4">
+                <Badge variant="secondary" className="text-sm">
+                  Beta v1.0
+                </Badge>
+                <Link to="/auth">
+                  <Button variant="accessibility" size="sm" className="flex items-center gap-2">
+                    <LogIn className="h-4 w-4" />
+                    Sign In
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        {/* Hero Section for unauthenticated users */}
+        <div className="relative py-24 overflow-hidden">
+          <div className="absolute inset-0 opacity-20">
+            <img 
+              src={heroImage} 
+              alt="Accessibility tools and features" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-5xl font-bold text-foreground mb-6">
+              Universal <span className="text-primary">Accessibility</span> Platform
+            </h1>
+            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+              Comprehensive accessibility features that adapt to your needs. 
+              Screen readers, voice control, audio captioning, and simplified interfaces - all in one platform.
+            </p>
+            <Link to="/auth">
+              <Button variant="hero" size="xl" className="mb-8">
+                Get Started <ChevronRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
         </div>
+      </div>
+    );
+  }
+
+  return (
+    <AuthGuard>
+      <div className="min-h-screen bg-gradient-hero text-foreground">
+        {/* Navigation */}
+        <nav className="bg-background/80 backdrop-blur-sm border-b border-border sticky top-0 z-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center h-16">
+              <div className="flex items-center gap-2">
+                <Shield className="h-8 w-8 text-primary" />
+                <span className="text-2xl font-bold text-foreground">Access+</span>
+              </div>
+              <div className="flex items-center gap-4">
+                <Badge variant="secondary" className="text-sm">
+                  Beta v1.0
+                </Badge>
+                <UserMenu />
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        {/* Hero Section */}
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0">
+            <img 
+              src={heroImage} 
+              alt="Accessibility technology illustration" 
+              className="w-full h-full object-cover opacity-20"
+            />
+            <div className="absolute inset-0 bg-gradient-hero/80"></div>
+          </div>
         
         <div className="relative container mx-auto px-4 py-24">
           <div className="max-w-4xl mx-auto text-center space-y-8">
@@ -263,9 +345,10 @@ const Index = () => {
               </Button>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+          </div>
+        </section>
+      </div>
+    </AuthGuard>
   );
 };
 
