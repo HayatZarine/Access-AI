@@ -128,7 +128,8 @@ All colors MUST be HSL with high contrast ratios for WCAG AAA compliance.
 
 /* Simplified UI Mode for Cognitive Accessibility */
 .simplified-ui {
-  font-size: 1.2em;
+  font-size: 1.4em !important;
+  line-height: 1.6 !important;
 }
 
 .simplified-ui * {
@@ -136,6 +137,7 @@ All colors MUST be HSL with high contrast ratios for WCAG AAA compliance.
   transition: none !important;
 }
 
+/* High contrast, simple backgrounds */
 .simplified-ui .bg-gradient-hero,
 .simplified-ui .bg-gradient-card,
 .simplified-ui .bg-gradient-primary {
@@ -147,6 +149,115 @@ All colors MUST be HSL with high contrast ratios for WCAG AAA compliance.
   box-shadow: none !important;
 }
 
+/* Clear, high-contrast borders */
 .simplified-ui .border-border {
-  border: 2px solid hsl(var(--primary)) !important;
+  border: 3px solid hsl(var(--primary)) !important;
+}
+
+/* Simplified feature cards - show one at a time */
+.simplified-ui .features-grid {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2rem !important;
+  max-width: 600px !important;
+  margin: 0 auto !important;
+}
+
+.simplified-ui .feature-card {
+  background: hsl(var(--card)) !important;
+  border: 3px solid hsl(var(--primary)) !important;
+  border-radius: 12px !important;
+  padding: 2rem !important;
+  text-align: center !important;
+}
+
+.simplified-ui .feature-card:not(.active-card) {
+  display: none !important;
+}
+
+.simplified-ui .feature-card.active-card {
+  display: block !important;
+}
+
+/* Large, clear buttons */
+.simplified-ui .btn-simplified {
+  min-height: 60px !important;
+  min-width: 200px !important;
+  font-size: 1.2em !important;
+  font-weight: bold !important;
+  border-radius: 8px !important;
+  border: 2px solid !important;
+  padding: 1rem 2rem !important;
+}
+
+.simplified-ui .btn-simplified.active {
+  background: hsl(var(--secondary)) !important;
+  color: hsl(var(--secondary-foreground)) !important;
+  border-color: hsl(var(--secondary)) !important;
+}
+
+.simplified-ui .btn-simplified.inactive {
+  background: hsl(var(--muted)) !important;
+  color: hsl(var(--muted-foreground)) !important;
+  border-color: hsl(var(--muted-foreground)) !important;
+}
+
+/* Navigation controls */
+.simplified-ui .nav-controls {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 1rem !important;
+  margin-top: 2rem !important;
+}
+
+.simplified-ui .nav-btn {
+  min-height: 50px !important;
+  min-width: 100px !important;
+  font-size: 1em !important;
+  font-weight: bold !important;
+  background: hsl(var(--accent)) !important;
+  color: hsl(var(--accent-foreground)) !important;
+  border: 2px solid hsl(var(--accent)) !important;
+  border-radius: 8px !important;
+}
+
+/* Hide complex UI elements */
+.simplified-ui .profiles-section,
+.simplified-ui .cta-section,
+.simplified-ui .hero-stats {
+  display: none !important;
+}
+
+/* Simplified navigation */
+.simplified-ui nav {
+  background: hsl(var(--card)) !important;
+  border-bottom: 3px solid hsl(var(--primary)) !important;
+}
+
+.simplified-ui .nav-badge {
+  display: none !important;
+}
+
+/* Large icon styling */
+.simplified-ui .feature-icon {
+  width: 80px !important;
+  height: 80px !important;
+  margin: 0 auto 1rem auto !important;
+}
+
+/* Show simplified elements only in simplified mode */
+.simplified-ui .simplified-icon,
+.simplified-ui .simplified-title,
+.simplified-ui .simplified-description,
+.simplified-ui .simplified-btn-text,
+.simplified-ui .status-indicator {
+  display: block !important;
+}
+
+/* Hide regular elements in simplified mode */
+.simplified-ui .regular-title,
+.simplified-ui .regular-description,
+.simplified-ui .regular-btn-text,
+.simplified-ui .feature-list {
+  display: none !important;
 }

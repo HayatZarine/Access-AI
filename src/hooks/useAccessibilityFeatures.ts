@@ -151,8 +151,117 @@ export const useAccessibilityFeatures = () => {
     const body = document.body;
     if (activate) {
       body.classList.add('simplified-ui');
+      
+      // Add voice feedback
+      if (speechSynthesis) {
+        const utterance = new SpeechSynthesisUtterance("🧹 Smart UI Simplification is now ON. The interface is now simplified for easier use.");
+        utterance.rate = 0.8; // Slower speech for cognitive accessibility
+        speechSynthesis.speak(utterance);
+      }
+      
+      // Set up simplified navigation
+      setupSimplifiedNavigation();
     } else {
       body.classList.remove('simplified-ui');
+      
+      if (speechSynthesis) {
+        const utterance = new SpeechSynthesisUtterance("Smart UI Simplification is now OFF. Full interface restored.");
+        utterance.rate = 0.8;
+        speechSynthesis.speak(utterance);
+      }
+      
+      // Remove simplified navigation
+      removeSimplifiedNavigation();
+    }
+  };
+
+  const setupSimplifiedNavigation = () => {
+    // Show first feature card by default
+    const featureCards = document.querySelectorAll('.feature-card');
+    featureCards.forEach((card, index) => {
+      if (index === 0) {
+        card.classList.add('active-card');
+      } else {
+        card.classList.remove('active-card');
+      }
+    });
+    
+    // Add navigation controls
+    addNavigationControls();
+  };
+
+  const removeSimplifiedNavigation = () => {
+    const featureCards = document.querySelectorAll('.feature-card');
+    featureCards.forEach(card => {
+      card.classList.remove('active-card');
+    });
+    
+    // Remove navigation controls
+    const navControls = document.querySelector('.nav-controls');
+    if (navControls) {
+      navControls.remove();
+    }
+  };
+
+  const addNavigationControls = () => {
+    const featuresSection = document.querySelector('.features-grid');
+    if (!featuresSection) return;
+    
+    // Remove existing controls
+    const existingControls = document.querySelector('.nav-controls');
+    if (existingControls) {
+      existingControls.remove();
+    }
+    
+    const navControls = document.createElement('div');
+    navControls.className = 'nav-controls';
+    navControls.innerHTML = `
+      <button class="nav-btn" id="prev-feature" aria-label="Previous feature">
+        ← Previous
+      </button>
+      <button class="nav-btn" id="next-feature" aria-label="Next feature">
+        Next →
+      </button>
+    `;
+    
+    featuresSection.parentNode?.insertBefore(navControls, featuresSection.nextSibling);
+    
+    // Add event listeners
+    const prevBtn = document.getElementById('prev-feature');
+    const nextBtn = document.getElementById('next-feature');
+    
+    prevBtn?.addEventListener('click', () => navigateFeatures(-1));
+    nextBtn?.addEventListener('click', () => navigateFeatures(1));
+  };
+
+  const navigateFeatures = (direction: number) => {
+    const featureCards = document.querySelectorAll('.feature-card');
+    let currentIndex = 0;
+    
+    featureCards.forEach((card, index) => {
+      if (card.classList.contains('active-card')) {
+        currentIndex = index;
+      }
+    });
+    
+    let newIndex = currentIndex + direction;
+    if (newIndex < 0) newIndex = featureCards.length - 1;
+    if (newIndex >= featureCards.length) newIndex = 0;
+    
+    featureCards.forEach((card, index) => {
+      if (index === newIndex) {
+        card.classList.add('active-card');
+      } else {
+        card.classList.remove('active-card');
+      }
+    });
+    
+    // Voice feedback for navigation
+    if (speechSynthesis) {
+      const featureTitles = ['Real-Time AI Captioning', 'AI-Powered Screen Reader', 'Voice + Eye Tracking Control', 'Smart UI Simplification'];
+      const utterance = new SpeechSynthesisUtterance(`Now showing: ${featureTitles[newIndex]}`);
+      utterance.rate = 0.8;
+      speechSynthesis.speak(utterance);
     }
   };
 
