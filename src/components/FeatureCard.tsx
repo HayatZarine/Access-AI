@@ -31,6 +31,7 @@ export const FeatureCard = ({
       case 'screen-reader': return '👁️';
       case 'voice-control': return '🎤';
       case 'simplification': return '🧹';
+      case 'scam-shield': return '🛡️';
       default: return '⚙️';
     }
   };
@@ -41,6 +42,7 @@ export const FeatureCard = ({
       case 'screen-reader': return '👁️ Screen Reader';
       case 'voice-control': return '🎤 Voice Control';
       case 'simplification': return '🧹 Simplify UI';
+      case 'scam-shield': return '🛡️ Scam Protection';
       default: return title;
     }
   };
@@ -85,6 +87,7 @@ export const FeatureCard = ({
               {id === 'screen-reader' && 'Reads the screen out loud for you'}
               {id === 'voice-control' && 'Control with your voice'}
               {id === 'simplification' && 'Makes the page easier to read'}
+              {id === 'scam-shield' && 'Protects you from scams and bad websites'}
             </p>
           </div>
           

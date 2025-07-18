@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useToast } from '@/hooks/use-toast';
+import { useScamDetection } from '@/hooks/useScamDetection';
 
 export interface AccessibilityFeature {
   id: string;
@@ -11,11 +12,13 @@ export interface AccessibilityFeature {
 
 export const useAccessibilityFeatures = () => {
   const { toast } = useToast();
+  const { toggleScamDetection } = useScamDetection();
   const [features, setFeatures] = useState<AccessibilityFeature[]>([
     { id: 'captioning', name: 'Real-Time AI Captioning', isActive: false, isSupported: false },
     { id: 'screen-reader', name: 'AI-Powered Screen Reader', isActive: false, isSupported: false },
     { id: 'voice-control', name: 'Voice Control', isActive: false, isSupported: false },
     { id: 'simplification', name: 'UI Simplification', isActive: false, isSupported: true },
+    { id: 'scam-shield', name: 'ScamShield Protection', isActive: false, isSupported: true },
   ]);
 
   const [isListening, setIsListening] = useState(false);
@@ -80,6 +83,9 @@ export const useAccessibilityFeatures = () => {
           break;
         case 'captioning':
           await toggleCaptioning(newActiveState);
+          break;
+        case 'scam-shield':
+          toggleScamDetection(newActiveState);
           break;
       }
 
@@ -311,6 +317,9 @@ export const useAccessibilityFeatures = () => {
           } catch {
             testResult = '❌ Microphone access denied';
           }
+          break;
+        case 'scam-shield':
+          testResult = '✅ ScamShield protection ready';
           break;
       }
     } catch (error) {

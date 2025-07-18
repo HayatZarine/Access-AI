@@ -105,6 +105,18 @@ const Index = () => {
         "Distraction removal",
         "Customizable layouts"
       ]
+    },
+    {
+      id: "scam-shield",
+      icon: Shield,
+      title: "ScamShield Protection",
+      description: "AI-powered protection from phishing, scams, and deceptive websites",
+      features: [
+        "Suspicious link detection",
+        "Pop-up scam blocker", 
+        "Form safety advisor",
+        "Real-time threat alerts"
+      ]
     }
   ];
 
