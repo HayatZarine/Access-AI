@@ -5,6 +5,7 @@ Access+ is a cross-platform accessibility solution designed to empower users wit
 
 ##  Features
 🦻 For Users with Hearing Impairments : 
+
 Real-Time AI Captioning: Transcribes audio from any app (video calls, YouTube, podcasts) into live captions.
 
 Emotion Recognition (Voice/Video): Detects emotions in speakers’ tone or facial expressions and displays visual cues.
@@ -14,6 +15,7 @@ Sound Event Detection: Alerts users to critical sounds (doorbells, alarms, siren
 Sign Language Interpreter: Converts sign language (via webcam) to text and vice versa for seamless communication.
 
 👁️ For Users with Visual Impairments : 
+
 AI-Powered Screen Reader: Reads out on-screen content intelligently, summarizing web pages and PDFs.
 
 Scene Description: Uses the camera to describe surroundings and highlight objects (e.g., “A person standing near a red car”).
@@ -23,6 +25,7 @@ Gesture-Based Navigation: Navigate apps/websites using predefined hand gestures 
 Braille Support: Integrates with refreshable braille displays and on-screen braille keyboards.
 
 🧠 For Users with Cognitive Impairments : 
+
 Simplified UI Mode: Removes clutter from websites and apps, presenting an easy-to-use, distraction-free interface.
 
 Routine & Reminder Assistant: Visual daily planner with cues, timers, and step-by-step task sequencing.
@@ -69,7 +72,7 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
--TensorFlow, PyTorch, Mediapipe, Whisper
+-TensorFlow, PyTorch, Mediapipe, Whisper(not in prototype)
 -Firebase / MongoDB
 - Deployment by lovable
 
@@ -82,6 +85,11 @@ This project is built with:
 Access+ reduces digital barriers and empowers differently-abled users to interact with technology independently. It unifies accessibility features into one platform, eliminating the need for fragmented tools.
 ## Screenshots 
 <img width="1363" height="639" alt="image" src="https://github.com/user-attachments/assets/07934a6a-3af6-41ac-906c-42065f3f80d3" />
+## What is working in prototype? 
+-  Sign-in option
+-  Screen reader reads the screen but only upto an extent
+-  Simplification of UI (but only basic mode)
+
 ## 🤝 Collaborators
 🖋️ Zarine Hayat – Concept & Design & Idea
 
