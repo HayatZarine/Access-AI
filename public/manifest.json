@@ -1,0 +1,46 @@
+{
+  "name": "Access+ | AI-Powered Accessibility Enhancement",
+  "short_name": "Access+",
+  "description": "Unified accessibility enhancement app powered by AI. Making digital interaction intuitive, inclusive, and empowering for everyone.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "hsl(var(--background))",
+  "theme_color": "hsl(var(--primary))",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/placeholder.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/placeholder.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["accessibility", "utilities", "productivity"],
+  "lang": "en",
+  "scope": "/",
+  "screenshots": [
+    {
+      "src": "/placeholder.svg",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/placeholder.svg",
+      "sizes": "750x1334",
+      "type": "image/svg+xml",
+      "form_factor": "narrow"
+    }
+  ]
+}
