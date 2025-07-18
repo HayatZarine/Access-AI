@@ -1,22 +1,45 @@
-# Welcome to your Lovable project
+# 🌐 Access+ – Unified Accessibility Enhancer (PWA)
+🛠 Prototype built as a Progressive Web App (PWA) for desktop & mobile
 
-## Project info
+Access+ is a cross-platform accessibility solution designed to empower users with hearing, visual, and cognitive impairments. With AI-powered features and a clean, simplified interface, Access+ enhances usability across digital platforms—bringing independence and inclusivity to every user.
 
-**URL**: https://lovable.dev/projects/dec25e06-04d0-4bee-a0a2-0acf8a2ea0b2
+## 🚀 Features
+🦻 For Users with Hearing Impairments
+Real-Time AI Captioning: Transcribes audio from any app (video calls, YouTube, podcasts) into live captions.
 
-## How can I edit this code?
+Emotion Recognition (Voice/Video): Detects emotions in speakers’ tone or facial expressions and displays visual cues.
 
-There are several ways of editing your application.
+Sound Event Detection: Alerts users to critical sounds (doorbells, alarms, sirens) using device microphone.
 
-**Use Lovable**
+Sign Language Interpreter: Converts sign language (via webcam) to text and vice versa for seamless communication.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/dec25e06-04d0-4bee-a0a2-0acf8a2ea0b2) and start prompting.
+👁️ For Users with Visual Impairments
+AI-Powered Screen Reader: Reads out on-screen content intelligently, summarizing web pages and PDFs.
 
-Changes made via Lovable will be committed automatically to this repo.
+Scene Description: Uses the camera to describe surroundings and highlight objects (e.g., “A person standing near a red car”).
 
-**Use your preferred IDE**
+Gesture-Based Navigation: Navigate apps/websites using predefined hand gestures tracked by the camera.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Braille Support: Integrates with refreshable braille displays and on-screen braille keyboards.
+
+🧠 For Users with Cognitive Impairments
+Simplified UI Mode: Removes clutter from websites and apps, presenting an easy-to-use, distraction-free interface.
+
+Routine & Reminder Assistant: Visual daily planner with cues, timers, and step-by-step task sequencing.
+
+Emotion-Aware Assistant: Detects distress and provides calming content or alerts caregivers.
+
+Language Simplifier: Automatically rewrites complex text (legal, medical, academic) into simple language.
+
+♿ Unified Features for All
+Voice & Eye Tracking Control: Full device interaction using only voice or eye movement.
+
+Customizable Profiles: Create and switch between accessibility profiles tailored to individual needs.
+
+Cross-Device Sync: Settings and preferences sync across desktop and mobile.
+
+- ScamShield (Digital Safety): Flags suspicious links, scam pop-ups, and warns users before submitting sensitive data.
+
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -36,22 +59,8 @@ npm i
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
+# Tech Stack 
 This project is built with:
 
 - Vite
@@ -59,15 +68,14 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+-TensorFlow, PyTorch, Mediapipe, Whisper
+-Firebase / MongoDB
 
-## How can I deploy this project?
+## 🌟 Why a PWA?
+✅ Installable on desktop & mobile
+✅ Works offline for key features
+✅ Lightweight & no need for browser extension permissions
 
-Simply open [Lovable](https://lovable.dev/projects/dec25e06-04d0-4bee-a0a2-0acf8a2ea0b2) and click on Share -> Publish.
+## 📈 Impact
+Access+ reduces digital barriers and empowers differently-abled users to interact with technology independently. It unifies accessibility features into one platform, eliminating the need for fragmented tools.
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
