@@ -85,12 +85,15 @@ This project is built with:
 Access+ reduces digital barriers and empowers differently-abled users to interact with technology independently. It unifies accessibility features into one platform, eliminating the need for fragmented tools.
 ## Screenshots 
 <img width="1363" height="639" alt="image" src="https://github.com/user-attachments/assets/07934a6a-3af6-41ac-906c-42065f3f80d3" />
+
 ## What is working in prototype? 
+
 -  Sign-in option
 -  Screen reader reads the screen but only upto an extent
 -  Simplification of UI (but only basic mode)
 
 ## 🤝 Collaborators
+
 🖋️ Zarine Hayat – Concept & Design & Idea
 
 💻 Lovable – Development Partner
@@ -98,6 +101,7 @@ Access+ reduces digital barriers and empowers differently-abled users to interac
 Plakshi Yadav - Pitching
 
 ## 📜 License
+
 MIT License
 
 
