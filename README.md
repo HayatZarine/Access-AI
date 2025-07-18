@@ -79,4 +79,13 @@ This project is built with:
 
 ## 📈 Impact
 Access+ reduces digital barriers and empowers differently-abled users to interact with technology independently. It unifies accessibility features into one platform, eliminating the need for fragmented tools.
+## Screenshots 
+<img width="1363" height="639" alt="image" src="https://github.com/user-attachments/assets/07934a6a-3af6-41ac-906c-42065f3f80d3" />
+
+
+
+
+
+
+
 
