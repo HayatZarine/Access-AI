@@ -1,5 +1,5 @@
 # 🌐 Access+ – Unified Accessibility Enhancer (PWA)
-🛠 Prototype built as a Progressive Web App (PWA) for desktop & mobile
+🛠 Prototype built as a Progressive Web App (PWA) for desktop & mobile - https://access-ai-unify.lovable.app/
 
 Access+ is a cross-platform accessibility solution designed to empower users with hearing, visual, and cognitive impairments. With AI-powered features and a clean, simplified interface, Access+ enhances usability across digital platforms—bringing independence and inclusivity to every user.
 
