@@ -3,7 +3,7 @@
 
 Access+ is a cross-platform accessibility solution designed to empower users with hearing, visual, and cognitive impairments. With AI-powered features and a clean, simplified interface, Access+ enhances usability across digital platforms—bringing independence and inclusivity to every user.
 
-## 🚀 Features
+##  Features
 🦻 For Users with Hearing Impairments
 Real-Time AI Captioning: Transcribes audio from any app (video calls, YouTube, podcasts) into live captions.
 
@@ -72,15 +72,17 @@ This project is built with:
 -Firebase / MongoDB
 - Deployment by lovable
 
-## 🌟 Why a PWA?
+##  Why a PWA?
 ✅ Installable on desktop & mobile
 ✅ Works offline for key features
 ✅ Lightweight & no need for browser extension permissions
 
-## 📈 Impact
+##  Impact
 Access+ reduces digital barriers and empowers differently-abled users to interact with technology independently. It unifies accessibility features into one platform, eliminating the need for fragmented tools.
 ## Screenshots 
 <img width="1363" height="639" alt="image" src="https://github.com/user-attachments/assets/07934a6a-3af6-41ac-906c-42065f3f80d3" />
+
+
 
 
 
