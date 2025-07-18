@@ -60,7 +60,7 @@ npm run dev
 ```
 
 
-# Tech Stack 
+## Tech Stack 
 This project is built with:
 
 - Vite
@@ -70,6 +70,7 @@ This project is built with:
 - Tailwind CSS
 -TensorFlow, PyTorch, Mediapipe, Whisper
 -Firebase / MongoDB
+- Deployment by lovable
 
 ## 🌟 Why a PWA?
 ✅ Installable on desktop & mobile
