@@ -32,6 +32,9 @@ export const FeatureCard = ({
       case 'voice-control': return '🎤';
       case 'simplification': return '🧹';
       case 'scam-shield': return '🛡️';
+      case 'sign-language': return '🤟';
+      case 'text-simplifier': return '📝';
+      case 'summarizer': return '📚';
       default: return '⚙️';
     }
   };
@@ -43,6 +46,9 @@ export const FeatureCard = ({
       case 'voice-control': return '🎤 Voice Control';
       case 'simplification': return '🧹 Simplify UI';
       case 'scam-shield': return '🛡️ Scam Protection';
+      case 'sign-language': return '🤟 Sign Language';
+      case 'text-simplifier': return '📝 Simple Text';
+      case 'summarizer': return '📚 Text Summary';
       default: return title;
     }
   };
@@ -88,6 +94,9 @@ export const FeatureCard = ({
               {id === 'voice-control' && 'Control with your voice'}
               {id === 'simplification' && 'Makes the page easier to read'}
               {id === 'scam-shield' && 'Protects you from scams and bad websites'}
+              {id === 'sign-language' && 'Sees your hand signs and turns them into words'}
+              {id === 'text-simplifier' && 'Makes hard words easier to understand'}
+              {id === 'summarizer' && 'Makes long text shorter and easier to read'}
             </p>
           </div>
           

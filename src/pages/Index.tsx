@@ -21,7 +21,10 @@ import {
   Search,
   Shield,
   ChevronRight,
-  LogIn
+  LogIn,
+  Hand,
+  FileText,
+  BookOpen
 } from "lucide-react";
 import heroImage from "@/assets/hero-accessibility.jpg";
 
@@ -116,6 +119,42 @@ const Index = () => {
         "Pop-up scam blocker", 
         "Form safety advisor",
         "Real-time threat alerts"
+      ]
+    },
+    {
+      id: "sign-language",
+      icon: Hand,
+      title: "Sign Language Detection",
+      description: "Real-time recognition and translation of sign language gestures",
+      features: [
+        "ASL gesture recognition",
+        "Real-time text conversion",
+        "Multi-language support",
+        "Learning assistance mode"
+      ]
+    },
+    {
+      id: "text-simplifier",
+      icon: FileText,
+      title: "Text Simplification",
+      description: "AI-powered text simplification for cognitive accessibility",
+      features: [
+        "Complex sentence breakdown",
+        "Vocabulary simplification",
+        "Reading level adjustment",
+        "Context preservation"
+      ]
+    },
+    {
+      id: "summarizer",
+      icon: BookOpen,
+      title: "Content Summarizer",
+      description: "Intelligent content summarization for faster comprehension",
+      features: [
+        "Key points extraction",
+        "Adjustable summary length",
+        "Multi-format support",
+        "Context-aware summaries"
       ]
     }
   ];
